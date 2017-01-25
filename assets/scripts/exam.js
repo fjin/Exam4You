@@ -1,4 +1,5 @@
-var questions_file = "ajax/questions.json";
+var numberOfQuestions = questions_set.length;
+
 var all_questions;
 $( document ).ready(function() {
     init();
@@ -7,8 +8,6 @@ $( document ).ready(function() {
 
 start = function(){
     console.log("start");
-    // loadAllQuestions(questions_file);
-
     loadQuestion(0);
 
 };
@@ -50,6 +49,21 @@ loadQuestion = function(question_no){
 
         $(".answers").html(answerHtml);
     });
+
+    var questionNo = parseInt($(".question_number").html());
+    if(questionNo == 0){
+        $(".prev").hide();
+        $(".next").show();
+    }
+    else if(questionNo == numberOfQuestions-1){
+        $(".prev").show();
+        $(".next").hide();
+    }
+    else{
+        $(".prev").show();
+        $(".next").show();
+    }
+
 
 
 
