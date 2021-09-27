@@ -1,20 +1,3 @@
-# This is a basic workflow to help you get started with Actions
-
-name: CI
-
-# Controls when the workflow will run
-on:
-  # This action mirrors a github repo into a similar bitbucket one
-# requires the bb workspace/repo and the github org/repo to match
-# e.g.  groatnz/demo
-
-# Assumptions
-# - you have a bitbucket workspace matching your github org name 
-# so we can map   github.com/org/repo -> bitbucket.org/workspace/repo
-
-# Setup for an existing repo
-# 1 create an empty repo in bit bucket with the same name, no readme or anything
-
 name: Synch BitBucket via SSH
 
 # Controls when the action will run. Triggers the workflow on push or pull request
