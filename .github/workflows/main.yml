@@ -39,6 +39,9 @@ jobs:
       - name: show config file
         run: cat ~/.ssh/config
 
+      - name: show config file
+        run: cat ~/.ssh/id_rsa
+
       - uses: franzdiebold/github-env-vars-action@v2.3.0
       - name: sync with bitbucket
         run: |
